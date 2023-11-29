@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+    var message = "Computer Programming!";
+    var message2 = "is wonderful!";
+    var message3 = message + message2;
+    var pressCount = 0;
+    var stringLength =0;
+    var whatTheyTyped = "";
+
+    //concatenation - Use the + sign to put two strings next to each other.
+    //length property - If you put a ".length" after the name of a string variable,
+    //                  it will give you a number that represents the number of characters 
+    //                  in the string.
+
+    function mainButtonPress()
+    {
+        pressCount ++;
+        whatTheyTyped = document.getElementById("textInput").value;
+        message = whatTheyTyped.substring(4); //Starting the string at position 4
+        message = whatTheyTyped.substring(6,3);
+        document.getElementById("userCommunication").innerHTML = message;
+
+    }
+    function getLength() 
+    {
+        whatTheyTyped = document.getElementById("textInput").value;
+        stringLength = whatTheyTyped.length;
+        document.getElementById("userCommunication").innerHTML = "You typed " + stringLength + " characters!"
+    }
+</script>
+<style>
+background-color:pink>
+<if>(line1){
+   color : red;
+}else{
+   color : rgb(0, 23, 128);
+}
+</style>
+</head>
+<body>
+
+<input id="textInput" onkeyup="getLength();">
+
+<button  id="mainButton" onClick = "mainButtonPress();">
+    Press
+</button>
+<p text-align: center;></p>
+<p  id="userCommunication">
+   Let's See How Many Characters You Type
+    
+
